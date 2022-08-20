@@ -3,11 +3,9 @@
     <ProfileImage :image="user.image" />
     <div className="body">
       <div className="top">
-        <span className="user">
-          <span className="name">{{user.name}}</span>
-          <span className="handle">{{user.handle}}</span>
-        </span>
-
+        <User :name="user.name"
+              :handle="user.handle">
+        </User>/>  
         <span className="timestamp">{{timestamp}}</span>
       </div>
 
@@ -28,6 +26,7 @@
 
 <script setup>
 import ProfileImage from './ProfileImage.vue';
+import User from './User.vue';
 
 const props = defineProps({
     user:{
