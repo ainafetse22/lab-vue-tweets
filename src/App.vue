@@ -1,9 +1,16 @@
 <template>
   <div class="app">
-    <Tweet />
+    <Tweet 
+    :user="tweets[0].user"
+    :message="tweets[0].message"
+    :timestamp="tweets[0].timestamp"/>
   </div>
 </template>
-
+name:String,
+    image:String,
+    handle:String,
+    message:String,
+    timestamp:String,
 <script>
 
 import Tweet from './components/Tweet.vue';
