@@ -1,9 +1,12 @@
 <template>
   <div class="app">
-    <Tweet 
-    :user="tweets[0].user"
-    :message="tweets[0].message"
-    :timestamp="tweets[0].timestamp"/>
+    <div v-for="tweet in tweets" :key="tweet.id">
+      <Tweet
+      :user="tweet.user"
+      :message="tweet.message"
+      :timestamp="tweet.timestamp"/>
+    
+    </div>
   </div>
 </template>
 <script>
@@ -13,7 +16,7 @@ import Tweet from './components/Tweet.vue';
 export default {
     data: () => ({
         tweets: [
-            {
+            {   id:0,
                 user: {
                     name: "Thoughts of Dog®",
                     image: "https://i.imgur.com/b0EdHVV.jpg",
@@ -22,7 +25,7 @@ export default {
                 timestamp: "1h ago",
                 message: "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
             },
-            {
+            {   id:1,
                 user: {
                     name: "Thoughts of Dog®",
                     image: "https://i.imgur.com/b0EdHVV.jpg",
@@ -31,7 +34,7 @@ export default {
                 timestamp: "2h ago",
                 message: "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
             },
-            {
+            {   id:2,
                 user: {
                     name: "Thoughts of Dog®",
                     image: "https://i.imgur.com/b0EdHVV.jpg",
