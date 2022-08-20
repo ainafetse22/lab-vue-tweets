@@ -1,11 +1,6 @@
 <template>
   <div className="tweet">
-    <img
-      :src="user.image"
-      className="profile"
-      alt="profile"
-    />
-
+    <ProfileImage :image="user.image" />
     <div className="body">
       <div className="top">
         <span className="user">
@@ -32,6 +27,7 @@
 </template>
 
 <script setup>
+import ProfileImage from './ProfileImage.vue';
 
 const props = defineProps({
     user:{

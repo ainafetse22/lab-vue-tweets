@@ -6,11 +6,6 @@
     :timestamp="tweets[0].timestamp"/>
   </div>
 </template>
-name:String,
-    image:String,
-    handle:String,
-    message:String,
-    timestamp:String,
 <script>
 
 import Tweet from './components/Tweet.vue';
